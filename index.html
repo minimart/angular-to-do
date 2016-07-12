@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="toDoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do App</title>
+    <script src="public/angular.min.js"></script>
+    <script src="index.js"></script>
+    <link href="stylesheet.css" />
+    </head>
+  <body ng-controller="addToDo">
+    <h1>To Do List!</h1>
+    <h3>Add items: </h3>
+      <input type="text" ng-model="itemToDo"></input>
+      <button ng-click="addItem()">Add</button>
+    <h3>Current List: </h3>
+    <ul ng-repeat="item in itemList">
+      {{item}}
+    </ul>
+  </body>
+</html>
